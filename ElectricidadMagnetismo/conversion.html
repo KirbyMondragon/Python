@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suma de fuerzas</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+
+<body>
+
+  <header class="hero">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <h2 class="nav__title">Evaluacion Final</h2>
+      </div>
+
+      <ul class="nav__link nav__link--menu">
+        <li class="nav__items">
+          <a href="index.html" class="nav__links">Inicio</a>
+        </li>
+        <li class="nav__items">
+          <a href="distancia2puntos.html" class="nav__links">Distancia entre puntos</a>
+        </li>
+        <li class="nav__items">
+          <a href="conversion.html" class="nav__links">Fuerza resultantes</a>
+        </li>
+        <li class="nav__items">
+          <a href="leyesCoulomb.html" class="nav__links">leyes de Coulomb</a>
+        </li>
+        <li class="nav__items">
+          <a href="/2doParcial/CargaElectrica.html" class="nav__links">2do parcial(Calculadora)</a>
+        </li>
+        <img src="./images/close.svg" class="nav__close">
+      </ul>
+
+      <div class="nav__menu">
+        <img src="./images/menu.svg" class="nav__img">
+      </div>
+    </nav>
+
+    <section class="hero__container container">
+      <h1 class="hero__title">Fuerzas resultantes</h1>
+      <p class="hero__paragraph">La fuerza resultante es la suma vectorial de todas las fuerzas individuales actuando
+        sobre un objeto. Cuando múltiples
+        fuerzas actúan sobre un objeto, la fuerza resultante es la fuerza neta que representa el efecto combinado de
+        todas estas
+        fuerzas.
+
+      </p>
+
+      <a href="#inicio" class="cta">Comienza ahora</a>
+    </section>
+  </header>
+
+  <main>
+    <section class="container about" id="inicio">
+      <h2 class="subtitle">Existen dos enfoques principales para calcular la fuerza resultante:</h2>
+
+
+      <div class="about__main">
+        <article class="about__icons">
+          <img src="./images/shapes.svg" class="about__icon">
+          <h3 class="about__title">Método analítico</h3>
+          <p class="about__paragrah"> Se suman
+            algebraicamente
+            las componentes correspondientes en cada dirección (horizontal y vertical en un sistema de coordenadas
+            cartesianas) para
+            encontrar las componentes de la fuerza resultante. Luego, se utiliza el teorema de Pitágoras y la
+            trigonometría
+            para
+            encontrar la magnitud y la dirección de la fuerza resultante.</p>
+        </article>
+
+
+        <article class="about__icons">
+          <img src="./images/paint.svg" class="about__icon">
+          <h3 class="about__title">Método gráfico</h3>
+          <p class="about__paragrah">Se utiliza el método del polígono o del triángulo para sumar vectores. En este
+            método, se
+            dibujan los
+            vectores a escala y se utiliza la regla del paralelogramo o la regla del triángulo para encontrar el vector
+            resultante.</p>
+        </article>
+      </div>
+    </section>
+
+
+
+    <section class="questions container">
+      <h2 class="subtitle">Método Analitico</h2>
+      <p class="questions__paragraph">En este primer ejemplo, vamos a poder observar paso a paso del como
+        resolver
+        la suma de fuerzas</p>
+      <br>
+      <h2 class="subtitle">Ejercicio 1</h2>
+      <section class="questions__container">
+        <article class="questions__padding">
+          <div class="questions__answer">
+            <h3 class="questions__title">paso 0 (Datos)
+              <span class="questions__arrow">
+                <img src="./images/arrow.svg" class="questions__img">
+              </span>
+            </h3>
+
+            <section class="knowledge">
+              <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                  <h2 class="subtitle">Datos</h2>
+                  <p class="knowledge__paragraph">Tenemos dos fuerzas:
+                    <br>
+                    F1 = 300 N,180°
+                    <br>
+                    F2 = 200 N, 60°
+                  </p>
+
+                  <p class="knowledge__paragraph">Tenemos dos fuerzas:
+
+                    F1 = 300 N,180°
+                    F2 = 200 N, 60°</p>
+
+                  <br>
+                </div>
+
+                <figure class="knowledge__picture">
+                  <img
+                    src="https://www.fisicapractica.com/imagenes/estatica-dinamica/ejercicios-suma-de-fuerzas-analiticamente-18.png"
+                    class="knowledge__img">
+                </figure>
+
+              </div>
+            </section>
+
+            <section class="questions__container">
+              <article class="questions__padding">
+                <div class="questions__answer">
+                  <h3 class="questions__title">Paso 1 (Descomponer Fuerza 1(F1))
+                    <span class="questions__arrow">
+                      <img src="./images/arrow.svg" class="questions__img">
+                    </span>
+                  </h3>
+
+                  <section class="knowledge">
+                    <div class="knowledge__container container">
+
+                      <div class="knowledege__texts">
+                        <h2 class="subtitle">Paso 1(Descomponer Fuerza 1(F1))</h2>
+                        <p class="knowledge__paragraph">Primero, descompondremos estas fuerzas en sus componentes
+                          horizontal y
+                          vertical utilizando trigonometría.
+                          <br>
+                          <br>
+                          Para F1 (300 N, 180 grados):
+                          La fuerza F1 tiene una magnitud de 300 N y una dirección de 180 grados (que es opuesta al eje
+                          positivo de
+                          las x).
+                          <br>
+                          <br>
+                          Componente horizontal de F1:
+                          <br>
+                          <strong>Formula</strong> F1x=F1×cos⁡(angulo)
+
+                          <br>
+                          <strong>Resolucion: </strong> 300×cos⁡(180) = −300 N
+                          <br>
+                          <br>
+                          Componente vertical de F1:
+                          <br>
+                          <strong>Formula</strong> F1y​=F1​×sin(angulo)
+                          <br>
+                          <strong>Resolucion: </strong> 300×sin(180∘)=0 N
+
+                        </p>
+                      </div>
+                      <figure class="knowledge__picture">
+                        <img
+                          src="https://www.fisicapractica.com/imagenes/estatica-dinamica/ejercicios-suma-de-fuerzas-analiticamente-18.png"
+                          class="knowledge__img">
+                      </figure>
+
+                    </div>
+
+                  </section>
+                </div>
+              </article>
+            </section>
+            <section class="questions__container">
+              <article class="questions__padding">
+                <div class="questions__answer">
+                  <h3 class="questions__title">Paso 2
+                    <span class="questions__arrow">
+                      <img src="./images/arrow.svg" class="questions__img">
+                    </span>
+                  </h3>
+
+                  <section class="knowledge">
+                    <div class="knowledge__container container">
+
+                      <div class="knowledege__texts">
+                        <h2 class="subtitle">Paso 2(Descomponer Fuerza 2(F2))</h2>
+                        <p class="knowledge__paragraph">Para F2 (200 N, 60 grados):
+                          La fuerza F2 tiene una magnitud de 200 N y una dirección de 60 grados (que es opuesta al eje
+                          positivo de
+                          las x).
+                          <br>
+                          <br>
+                          Componente horizontal de F2:
+                          <br>
+                          <strong>Formula</strong> F2x=F2×cos⁡(angulo)
+                          <br>
+                          <strong>Resolucion: </strong> 200×cos⁡(60)=100 N
+                          <br>
+                          <br>
+                          Componente vertical de F2:
+                          <br>
+                          <strong>Formula</strong> F2y=F2×sin⁡(angulo)
+                          <br>
+                          <strong>Resolucion: </strong> 200×sin⁡(60)=173.2 N
+                        </p>
+                        <br>
+
+                        <br>
+
+
+
+                      </div>
+                      <figure class="knowledge__picture">
+                        <img
+                          src="https://www.fisicapractica.com/imagenes/estatica-dinamica/ejercicios-suma-de-fuerzas-analiticamente-18.png"
+                          class="knowledge__img">
+                      </figure>
+
+                    </div>
+
+                  </section>
+                </div>
+              </article>
+
+              <section class="questions__container">
+                <article class="questions__padding">
+                  <div class="questions__answer">
+                    <h3 class="questions__title">Paso 3(Sumar los componentes)
+                      <span class="questions__arrow">
+                        <img src="./images/arrow.svg" class="questions__img">
+                      </span>
+                    </h3>
+
+                    <section class="knowledge">
+                      <div class="knowledge__container container">
+
+                        <div class="knowledege__texts">
+                          <h2 class="subtitle">Sumar los componentes</h2>
+                          <p class="knowledge__paragraph">Ahora que hemos descompuesto las fuerzas en sus componentes
+                            horizontal
+                            y
+                            vertical, podemos sumar las componentes correspondientes para encontrar las componentes de
+                            la
+                            fuerza
+                            resultante.
+                            <br>
+                            <br>
+                            Componente horizontal de la fuerza resultante:
+                            <br>
+                            <strong>Formula</strong> Fx=F1x+F2x
+                            <br>
+                            <strong>Resolucion: </strong> −300+100=−200 N
+                            <br>
+                            <br>
+                            Componente vertical de la fuerza resultante:
+                            <br>
+                            <strong>Formula</strong> Fy=F1y+F2y
+                            <br>
+                            <strong>Resolucion: </strong> 0+173.2=173.2 N
+                          </p>
+                        </div>
+                        <figure class="knowledge__picture">
+                          <img
+                            src="https://www.fisicapractica.com/imagenes/estatica-dinamica/ejercicios-suma-de-fuerzas-analiticamente-18.png"
+                            class="knowledge__img">
+                        </figure>
+
+                      </div>
+
+                    </section>
+                  </div>
+                </article>
+
+                <section class="questions__container">
+                  <article class="questions__padding">
+                    <div class="questions__answer">
+                      <h3 class="questions__title">Paso 4(Encontrar la magnitud y la dirección de la fuerza resultante)
+                        <span class="questions__arrow">
+                          <img src="./images/arrow.svg" class="questions__img">
+                        </span>
+                      </h3>
+
+                      <section class="knowledge">
+                        <div class="knowledge__container container">
+
+                          <div class="knowledege__texts">
+                            <h2 class="subtitle">Encontrar la magnitud y la dirección de la fuerza resultante
+                            </h2>
+                            <p class="knowledge__paragraph">Ahora que hemos encontrado las componentes de la fuerza
+                              resultante,
+                              podemos
+                              usar el teorema de Pitágoras y la trigonometría para encontrar la magnitud y la dirección
+                              de la
+                              fuerza
+                              resultante.
+                              <br>
+                              <br>
+                              Magnitud de la fuerza resultante:
+                              <br>
+                              <strong>Formula</strong> F=√(Fx^2+Fy^2)
+                              <br>
+                              <strong>Resolucion: </strong> √((−200)^2 + (173.2)^2)=264.5718 N
+                              <br>
+                              <br>
+                              Angulo de la fuerza resultante:
+                              <br>
+                              <strong>Formula</strong> θ=tan^−1(Fy/Fx)
+                              <br>
+                              <strong>Resolucion: </strong>
+                              <br>
+                              tan^−1(173.2/−200)=−40.8925°
+                              <br>
+                              180°−40.8925°=140.9°<strong>≈139.1°</strong>
+                            </p>
+                            <h2 class="subtitle">Resultados</h2>
+                            <p class="knowledge__paragraph">La fuerza resultante tiene una magnitud de <strong> 264.6
+                                N</strong> y
+                              una
+                              dirección de <strong>139.1
+                                grados (que es opuesta al eje positivo de las x).</strong>
+                            </p>
+                            <br>
+                          </div>
+                          <figure class="knowledge__picture">
+                            <img
+                              src="https://www.fisicapractica.com/imagenes/estatica-dinamica/ejercicios-suma-de-fuerzas-analiticamente-18.png"
+                              class="knowledge__img">
+                          </figure>
+
+                        </div>
+
+                      </section>
+                    </div>
+                  </article>
+          </div>
+      </section>
+    </section>
+    </section>
+  </section>
+          <div class="calculate">
+            <h2>Calculadora de distancia de una fuerza</h2>
+            <br>
+            <h4>Calculadora de Vectores</h4>
+            <h3>Fuerza 1</h3>
+            <input class="controls" type="number" name="fuerza1" id="fuerza1"
+                placeholder="Escribe la Fuerza 1">
+            <h3>Ángulo 1</h3>
+            <input class="controls" type="number" name="angulo1" id="angulo1"
+                placeholder="Escribe el Ángulo 1">
+            <h3>Fuerza 2</h3>
+            <input class="controls" type="number" name="fuerza2" id="fuerza2"
+              placeholder="Escribe la Fuerza 2">
+            <h3>Ángulo 2</h3>
+            <input class="controls" type="number" name="angulo2" id="angulo2"
+              placeholder="Escribe el Ángulo 2">
+            <br>
+            <button class="cta" id="btn">Calcular</button>
+          </div>
+
+      <div class="calculate">
+        <h1>Resultado</h1>
+        <br>
+        <h3>Fuerza Resultante</h3>
+          <p id="resultadoFuerza">El resultado se vera cuando ingreses datos</p>
+          <br>
+        <h3>Ángulo Resultante</h3>
+          <p id="resultadoAngulo">El resultado se vera cuando ingreses datos</p> 
+      </div>
+
+      <script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+          const fuerza1 = parseFloat(document.getElementById('fuerza1').value);
+          const angulo1 = (parseFloat(document.getElementById('angulo1').value) * Math.PI) / 180;
+
+          const fuerza2 = parseFloat(document.getElementById('fuerza2').value);
+          const angulo2 = (parseFloat(document.getElementById('angulo2').value) * Math.PI) / 180;
+
+          const resultadoFuerza = document.getElementById('resultadoFuerza');
+          const resultadoAngulo = document.getElementById('resultadoAngulo');
+
+          // Calcular las componentes x y y para la Fuerza 1
+          const Fx1 = fuerza1 * Math.cos(angulo1);
+          const Fy1 = fuerza1 * Math.sin(angulo1);
+
+          // Calcular las componentes x y y para la Fuerza 2
+          const Fx2 = fuerza2 * Math.cos(angulo2);
+          const Fy2 = fuerza2 * Math.sin(angulo2);
+
+          // Sumar las componentes en x y en y para obtener el resultado total
+          const FxTotal = Fx1 + Fx2;
+          const FyTotal = Fy1 + Fy2;
+
+          // Calcular la magnitud de la fuerza resultante
+          const FuerzaResultante = Math.sqrt(Math.pow(FxTotal, 2) + Math.pow(FyTotal, 2));
+
+          // Calcular el ángulo resultante a partir de las componentes en x y en y
+          let AnguloResultante = Math.atan2(FyTotal, FxTotal) * (180 / Math.PI);
+          if (AnguloResultante < 0) {
+            AnguloResultante += 360;
+          }
+
+          resultadoFuerza.innerHTML = FuerzaResultante.toFixed(2); // Redondear a 2 decimales
+          resultadoAngulo.innerHTML = AnguloResultante.toFixed(2); // Redondear a 2 decimales
+        });
+      </script>
+      
+    </section>
+    
+    <section class="testimony">
+      <div class="testimony__container container">
+
+        <section class="testimony__body testimony__body--show" data-id="1">
+          <div class="testimony__texts">
+            <h2 class="subtitle">Mi nombre es Kevin Mondragon <span class="testimony__course">Estudiante de ingenieria
+                de software</span></h2>
+            <p class="testimony__review">Este proyecto es para mi evalucion de primer parcial de manera extraordinaria
+            </p>
+
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="./images/kevinMondragon.jpg" class="testimony__img">
+          </figure>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <section class="footer__copy container">
+      <div class="footer__social">
+        <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+        <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+        <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+      </div>
+
+      <h3 class="footer__copyright">Derechos reservados &copy; Universidad Politécnica de Santa Rosa Jáuregui</h3>
+    </section>
+  </footer>
+
+  <script src="./js/slider.js"></script>
+  <script src="./js/questions.js"></script>
+  <script src="./js/menu.js"></script>
+</body>
+
+</html>

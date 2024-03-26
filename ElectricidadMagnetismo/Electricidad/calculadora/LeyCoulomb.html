@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Ley Coulomb</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)"><img
+        src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/12/star-wars-chewbacca-2169991.jpg?tf=3840x"
+        alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Suma Fuerzas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="LeyCoulomb.html">fuerza eléctrica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="LeyCoulombQ.html">Carga eléctrica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Proximamente</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="calculate">
+    <h4>Calculadora de Ley de Coulomb </h4>
+    <h3>Q1</h3>
+    <input class="controls" type="number" name="carga1" id="carga1" placeholder="Escribe la carga 1">
+    <select name="UnidadQ1" class="value">
+      <option value="Coulomb" selected>Coulomb</option>
+      <option value="Millicoulomb">Millicoulomb</option>
+      <option value="Microcoulomb">Microcoulomb</option>
+      <option value="Nanocoulomb">Nanocoulomb</option>
+    </select>
+
+    <h3>Q2</h3>
+    <input class="controls" type="number" name="carga2" id="carga2" placeholder="Escribe la carga 2">
+
+    <select name="UnidadQ2" class="value">
+      <option value="Coulomb2" selected>Coulomb</option>
+      <option value="Millicoulomb2">Millicoulomb</option>
+      <option value="Microcoulomb2">Microcoulomb</option>
+      <option value="Nanocoulomb2">Nanocoulomb</option>
+    </select>
+
+    <h3>R</h3>
+    <input class="controls" type="number" name="distancia" id="distancia" placeholder="Escribe la distancia">
+    <p>Recuerda que la fuerza es en Metros</p>
+    <button id="btn">Calcular</button>
+  </section>
+
+  <div class="calculate">
+    <h1>Resultado</h1>
+    <br>
+    <h3>La fuerza es: </h3>
+    <div class="controls">
+      <p id="fuerza"></p>
+    </div>
+
+  </div>
+
+  <script>
+    //function Proceso
+    function valores(selectedValue, selectedValue2, carga1, carga2) {
+      var selectedValue;
+      var selectedValue2;
+      var carga1;
+      var carga2;
+      var resultado;
+
+      if (selectedValue != null) {
+        if (selectedValue == "Coulomb") {
+          carga1 = carga1;
+        }
+        if (selectedValue == "Millicoulomb") {
+          carga1 = carga1 * Math.pow(10, -3);
+        } else if (selectedValue == "Microcoulomb") {
+          carga1 = carga1 * Math.pow(10, -6);
+        } else if (selectedValue == "Nanocoulomb") {
+          carga1 = carga1 * Math.pow(10, -9);
+        }
+
+      }
+      if (selectedValue2 != null) {
+        if (selectedValue2 == "Coulomb2") {
+          
+        }
+        if (selectedValue2 == "Millicoulomb2") {
+          carga2 = carga2 * Math.pow(10, -3);
+        } else if (selectedValue2 == "Microcoulomb2") {
+          carga2 = carga2 * Math.pow(10, -6);
+        } else if (selectedValue2 == "Nanocoulomb2") {
+          carga2 = carga2 * Math.pow(10, -9);
+        }
+      }
+      resultado = carga1 * carga2;
+      return resultado;
+    }
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+      // Datos para calcular la Ley de Coulomb
+      //Datos de cargas
+      var carga1 = parseFloat(document.getElementById('carga1').value);
+      var carga2 = parseFloat(document.getElementById('carga2').value);
+      //Dato de distancia
+      const distancia = parseFloat(document.getElementById('distancia').value);
+      //Datos de unidades
+      const UnidadQ1 = document.querySelector('select[name="UnidadQ1"]');
+      const UnidadQ2 = document.querySelector('select[name="UnidadQ2"]');
+      const selectedValue = UnidadQ1.value; // Obtiene el valor seleccionado
+      const selectedValue2 = UnidadQ2.value; // Obtiene el valor seleccionado
+      //Constante de Coulomb  
+      const k = 9 * Math.pow(10, 9);
+
+      //Proceso para convertir las unidades
+      var resultadoUnionCargas = valores(selectedValue, selectedValue2, carga1, carga2);
+
+      // Proceso para calcular la Ley de Coulomb  
+      var resultado = k * ((resultadoUnionCargas) / Math.pow(distancia, 2));
+
+
+
+      // Mostrar el resultado
+      const resultadoElement = document.getElementById('fuerza');
+      resultadoElement.textContent = `La fuerza es: ${resultado}`;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styleExcel.css">
+    <title>Carga eléctrica</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Kevin Mondragon</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="link active">Suma de fuerzas</a></li>
+                    <li><a href="LeyCoulomb.html" class="link">Fuerza de ley Coulomb</a></li>
+                    <li><a href="CargaElectricaQ2.html" class="link">Carga eléctrica</a></li>
+                    <li><a href="#" class="link">Proximamente...</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+
+     <!----------------------------- Form box ----------------------------------->    
+        <div class="form-box">
+    
+            <!------------------- login form -------------------------->
+
+            <div class="login-container" id="login">
+                <div class="top">
+                    
+                </div>
+                
+                <div class="input-box">
+                    <input class="submit" type="number" name="carga1" id="carga1" placeholder="Escribe la carga 1">
+                    <select name="UnidadQ1" class="input-fieldJitomate">
+                        <option value="Coulomb" selected>Coulomb</option>
+                        <option value="Millicoulomb">Millicoulomb</option>
+                        <option value="Microcoulomb">Microcoulomb</option>
+                        <option value="Nanocoulomb">Nanocoulomb</option>
+                      </select>
+                </div>
+                <div class="input-box">
+                    <input class="input-fieldCarne" type="number" name="distancia" id="distancia" placeholder="Escribe la distancia">
+                    <select name="opcionDistancia" class="submitCarne">
+                        <option value="Metros" selected>Metro</option>
+                        <option value="Centimetro">Centímetro</option>
+                        <option value="Milimetro">Milímetro</option>
+                    </select>
+                </div> 
+                <div class="input-box">
+                    <input class="input-fieldLechuga" type="number" name="fuerza" id="fuerza" placeholder="Escribe la Fuerza">
+                </div> 
+                <div class="input-box">
+                    <button class="submit" id="btn">Calcular</button>
+                </div>
+               
+            </div>
+            
+        </div>
+        <header>
+            <div class="two-col">
+                <p id="resultadoFuerza"></p>
+            </div>
+        </header>
+    </div>
+   
+
+
+    <script>
+        function conversion(selectedValue, carga1) {
+          if (selectedValue != null) {
+            if (selectedValue == "Coulomb") {
+              return carga1;
+            } else if (selectedValue == "Millicoulomb") {
+              return carga1 * Math.pow(10, -3);
+            } else if (selectedValue == "Microcoulomb") {
+              return carga1 * Math.pow(10, -6);
+            } else if (selectedValue == "Nanocoulomb") {
+              return carga1 * Math.pow(10, -9);
+            }
+          }
+          return carga1; // Valor por defecto si no se selecciona ninguna unidad
+        }
+    
+        function conversionDistancia(selectedDistancia, distancia) {
+            if (selectedDistancia != "Metros") {
+                if (selectedDistancia == "Centimetro") {
+                return distancia / 100;
+              } else if (selectedDistancia == "Milimetro") {
+                return distancia / 1000;
+              }
+            }
+            return distancia; // Valor por defecto si no se selecciona ninguna unidad
+        }
+    
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+          // Datos para calcular la Ley de Coulomb
+          var fuerza = parseFloat(document.getElementById('fuerza').value);
+    
+          // Datos de cargas
+          var carga1 = parseFloat(document.getElementById('carga1').value);
+          const UnidadQ1 = document.querySelector('select[name="UnidadQ1"]');
+          const selectedValue = UnidadQ1.value; // Obtiene el valor seleccionado
+    
+          // Dato de distancia
+          const distancia = parseFloat(document.getElementById('distancia').value);
+          const opcionDistancia = document.querySelector('select[name="opcionDistancia"]');
+          const selectedDistancia = opcionDistancia.value; // Obtiene el valor seleccionado
+    
+          // Constante de Coulomb
+          const k = 9 * Math.pow(10, 9);
+    
+          // Proceso para convertir las unidades
+          var conversionQ1 = conversion(selectedValue, carga1);
+          var conversionDistanciaValue = conversionDistancia(selectedDistancia, distancia); // Cambiado el nombre
+          // Proceso para calcular la Ley de Coulomb
+          var resultado = (fuerza * Math.pow(conversionDistanciaValue, 2)) / (k * conversionQ1);
+    
+          // Mostrar el resultado
+          const resultadoElement = document.getElementById('resultadoFuerza');
+          resultadoElement.textContent = `La carga 2 es: ${resultado} C`;
+        });
+    </script>
+
+</body>
+</html>
